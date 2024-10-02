@@ -1,9 +1,9 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../Rotas/conexao.js');
-// NÃO importe Discipline ainda, para evitar referências circulares
-// Discipline será referenciado após a definição do modelo Course
+// NÃO importe Course ainda, para evitar referências circulares
+// Course será referenciado após a definição do modelo Discipline
 
-const Course = sequelize.define('Course', {
+const Discipline = sequelize.define('Discipline', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -11,12 +11,12 @@ const Course = sequelize.define('Course', {
 });
 
 // Exporta o modelo antes de criar as associações para evitar referência circular
-module.exports = Course;
+module.exports = Discipline;
 
-// Agora que Course foi exportado, podemos importar Discipline
-const Discipline = require('./disciplina.js');
+// Agora que Discipline foi exportado, podemos importar Course
+const Course = require('./course.js');
 
 // Defina a associação depois que ambos os modelos tiverem sido definidos
-Course.belongsToMany(Discipline, { through: 'CourseDiscipline' });
 Discipline.belongsToMany(Course, { through: 'CourseDiscipline' });
+Course.belongsToMany(Discipline, { through: 'CourseDiscipline' });
 

@@ -4,6 +4,7 @@ const cors = require('cors');
 const sequelize = require('./Rotas/conexao.js');
 const courseRoutes = require('./Rotas/courseRoutes.js');
 const studentRoutes = require('./Rotas/studentRoutes.js');
+const disciplineRoutes = require('./Rotas/disciplinaRoutes.js');
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 
 app.use('/courses', courseRoutes);
 app.use('/students', studentRoutes);
-
+app.use('/disciplines', disciplineRoutes);
 sequelize.sync().then(() => {
   app.listen(3060, () => {
     console.log('Servidor rodando na porta 3060');
