@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../Rotas/conexao.jsc');
+const sequelize = require('../Rotas/conexao.js');
 const Course = require('./course.js');
 
 const Student = sequelize.define('Student', {

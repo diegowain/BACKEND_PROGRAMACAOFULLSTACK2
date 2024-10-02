@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 // Configuração do banco de dados
-const sequelize = new Sequelize('full', 'root', '', {
+const sequelize = new Sequelize('ful', 'root', '', {
   host: 'localhost',
   dialect: 'mysql',
 });

@@ -14,7 +14,7 @@ app.use('/courses', courseRoutes);
 app.use('/students', studentRoutes);
 
 sequelize.sync().then(() => {
-  app.listen(3001, () => {
-    console.log('Servidor rodando na porta 3001');
+  app.listen(3060, () => {
+    console.log('Servidor rodando na porta 3060');
   });
 });
