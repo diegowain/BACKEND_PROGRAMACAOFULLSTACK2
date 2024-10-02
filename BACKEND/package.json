@@ -1,0 +1,30 @@
+{
+  "name": "backend_programacaofullstack2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegowain/BACKEND_PROGRAMACAOFULLSTACK2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegowain/BACKEND_PROGRAMACAOFULLSTACK2/issues"
+  },
+  "homepage": "https://github.com/diegowain/BACKEND_PROGRAMACAOFULLSTACK2#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.3",
+    "sequelize": "^6.37.3"
+  }
+}
